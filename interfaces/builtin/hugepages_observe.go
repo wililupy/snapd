@@ -38,7 +38,7 @@ const hugepagesObserveConnectedPlugAppArmor = `
 
 func init() {
 	registerIface(&commonInterface{
-		name:                     "hugepages-control",
+		name:                     "hugepages-observe",
 		summary:                  hugepagesObserveSummary,
 		implicitOnCore:           true,
 		implicitOnClassic:        true,
