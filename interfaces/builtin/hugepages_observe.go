@@ -22,7 +22,7 @@ package builtin
 const hugepagesObserveSummary = `allows using hugepages`
 
 const hugepagesObserveBaseDeclarationSlots = `
-  hugepages-control:
+  hugepages-observe:
     allow-installation:
       slot-snap-type:
         - core
