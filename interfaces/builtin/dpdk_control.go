@@ -31,9 +31,7 @@ const dpdkControlBaseDeclarationSlots = `
 
 const dpdkControlConnectedPlugAppArmor = `
 # Description: Allow control to dpdk.
-/sys/kernel/mm/hugepages/{,*} rw,
-/dev/hugepages/{,**} wk,
-/run/dpdk/{,**} wk,
+/run/dpdk/{,/**} rwk,
 `
 
 func init() {
