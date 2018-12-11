@@ -19,7 +19,7 @@
 
 package builtin
 
-const hugepagesControlSummary = `allows using hugepages`
+const hugepagesControlSummary = `allows controlling hugepages`
 
 const hugepagesControlBaseDeclarationSlots = `
   hugepages-control:

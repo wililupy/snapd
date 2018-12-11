@@ -30,7 +30,7 @@ const hugepagesObserveBaseDeclarationSlots = `
 `
 
 const hugepagesObserveConnectedPlugAppArmor = `
-# Description: Allow control to hugepages.
+# Description: Allow using hugepages.
 /sys/kernel/mm/hugepages/{,*} r,
 /dev/hugepages/{,**} r,
 /run/hugepages/{,**} r,

@@ -31,7 +31,18 @@ const dpdkControlBaseDeclarationSlots = `
 
 const dpdkControlConnectedPlugAppArmor = `
 # Description: Allow control to dpdk.
-/run/dpdk/{,/**} rwk,
+/run/dpdk{,/**} rwk,
+owner @{PROC}/@{pid}/pagemap r,
+/sys/bus/pci/drivers/virtio-pci/unbind rw,
+/sys/bus/pci/drivers/e1000/unbind rw,
+/sys/bus/pci/drivers/igb_uio/unbind rw,
+/sys/bus/pci/drivers/rte_kni/unbind rw,
+/sys/bus/pci/drivers/virtio-pci/bind rw,
+/sys/bus/pci/drivers/e1000/bind rw,
+/sys/bus/pci/drivers/igb_uio/bind rw,
+/sys/bus/pci/drivers/rte_kni/bind rw,
+/sys/devices/pci*{,/**} rw,
+/proc/ioports r,
 `
 
 func init() {
