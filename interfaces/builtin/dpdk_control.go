@@ -53,6 +53,9 @@ const dpdkControlConnectedPlugSecComp = `
 # Description: Controls DPDK SecComp.
 move_pages
 `
+
+var dpdkControlConnectedPlugUDev = []string{`SUBSYSTEM=="uio"`}
+
 func init() {
 	registerIface(&commonInterface{
 		name:                     "dpdk-control",
@@ -63,5 +66,6 @@ func init() {
 		baseDeclarationSlots:     dpdkControlBaseDeclarationSlots,
 		connectedPlugAppArmor:    dpdkControlConnectedPlugAppArmor,
 		connectedPlugSecComp:  	  dpdkControlConnectedPlugSecComp,
+		connectedPlugUDev:        dpdkControlConnectedPlugUDev,
 	})
 }
