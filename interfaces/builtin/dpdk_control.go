@@ -59,5 +59,6 @@ func init() {
 		reservedForOS:            true,
 		baseDeclarationSlots:     dpdkControlBaseDeclarationSlots,
 		connectedPlugAppArmor:    dpdkControlConnectedPlugAppArmor,
+		connectedPlugSecComp:  	  dpdkControlConnectedPlugSecComp,
 	})
 }
