@@ -37,13 +37,16 @@ owner @{PROC}/@{pid}/pagemap r,
 /sys/bus/pci/drivers/e1000/unbind rw,
 /sys/bus/pci/drivers/igb_uio/unbind rw,
 /sys/bus/pci/drivers/rte_kni/unbind rw,
+/sys/bus/pci/drivers/uio_pci_generic/unbind rw,
 /sys/bus/pci/drivers/virtio-pci/bind rw,
 /sys/bus/pci/drivers/e1000/bind rw,
 /sys/bus/pci/drivers/igb_uio/bind rw,
 /sys/bus/pci/drivers/rte_kni/bind rw,
+/sys/bus/pci/drivers/uio_pci_generic/bind rw,
 /sys/devices/pci*{,/**} rw,
 /proc/ioports r,
 /dev/uio[0-9]* rw,
+/sys/bus/pci/drivers{,/**} rw,
 `
 
 const dpdkControlConnectedPlugSecComp = `
