@@ -46,6 +46,10 @@ owner @{PROC}/@{pid}/pagemap r,
 /dev/uio[0-9]* rw,
 `
 
+const dpdkControlConnectedPlugSecComp = `
+# Description: Controls DPDK SecComp.
+move_pages
+`
 func init() {
 	registerIface(&commonInterface{
 		name:                     "dpdk-control",
