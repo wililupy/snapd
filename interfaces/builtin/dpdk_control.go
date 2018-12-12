@@ -43,6 +43,7 @@ owner @{PROC}/@{pid}/pagemap r,
 /sys/bus/pci/drivers/rte_kni/bind rw,
 /sys/devices/pci*{,/**} rw,
 /proc/ioports r,
+/dev/uio[0-9]* rw,
 `
 
 func init() {
